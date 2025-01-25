@@ -1,7 +1,11 @@
 # start tmux
-if [[ ! $(tmux list-sessions) ]]; then 
-  tmux
+if [[ "$TMUX" = "" ]]; 
+then 
+  tmux attach -t MY_TMUX || tmux new -s MY_TMUX; 
 fi
+
+
+
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export PATH=$HOME/.local/bin:$PATH
