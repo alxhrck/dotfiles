@@ -1,0 +1,36 @@
+# disable CTRL + S and CTRL + Q
+stty -ixon
+
+# enable comments "#" expressions in the prompt shell
+setopt INTERACTIVE_COMMENTS
+
+# list files with details
+alias ll="ls -larht"
+
+# show confirm prompt
+alias rm="rm -i"
+
+# start tmux
+if [[ "$TMUX" = "" ]];
+then
+  tmux attach -t MY_TMUX || tmux new -s MY_TMUX;
+fi
+
+export HISTFILE="$HOME/.zsh_history"
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export PATH=$HOME/.local/bin:$PATH
+
+# User configuration
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+
+function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; tmux set-window-option automatic-rename on }
+function source_if_exists () {
+    if test -r "$1"; then
+        source "$1"
+    fi
+}
+
+source_if_exists ~/.config/history.zsh
+
+eval "$(starship init zsh)"

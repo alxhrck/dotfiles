@@ -1,0 +1,30 @@
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+# Send Ctrl + x + | to tmux (xxd -ps)
+[[keyboard.bindings]]
+chars = "\u0018|"
+key = "H"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0018-"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "W"
+mods = "Control"
