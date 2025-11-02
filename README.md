@@ -5,6 +5,6 @@ install zsh
 install starship
 install alacritty
 
-bootstrap.sh
+install.sh
 
 ```

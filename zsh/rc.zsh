@@ -5,9 +5,10 @@ stty -ixon
 setopt INTERACTIVE_COMMENTS
 
 
-alias ll="ls -larht"  # list files with details
+alias ll="ls --color=auto -larht"  # list files with details
 alias code="flatpak run com.visualstudio.code"
 alias rm="rm -i"  # show confirm prompt
+alias ls="ls --color=auto"
 
 # start tmux
 if [[ "$TMUX" = "" ]];
@@ -16,7 +17,7 @@ then
 fi
 
 export HISTFILE="$HOME/.zsh_history"
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export LSCOLORS=Exgxcxdxbxegedabagacad
 export PATH=$HOME/.local/bin:$PATH
 
 # User configuration
