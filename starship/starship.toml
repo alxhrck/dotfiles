@@ -1,7 +1,6 @@
 #format = '$all$directory$character'
 
 format = """
-
 $directory\
 $git_branch\
 $git_state\
