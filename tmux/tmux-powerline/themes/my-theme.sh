@@ -87,8 +87,8 @@ fi
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		"pwd green black" \
-		"date black lightgray" \
+		#"date black lightgray" \
 		#"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		#"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		"utc_time black lightgray" \
 	)
 fi

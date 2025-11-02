@@ -4,11 +4,10 @@ stty -ixon
 # enable comments "#" expressions in the prompt shell
 setopt INTERACTIVE_COMMENTS
 
-# list files with details
-alias ll="ls -larht"
 
-# show confirm prompt
-alias rm="rm -i"
+alias ll="ls -larht"  # list files with details
+alias code="flatpak run com.visualstudio.code"
+alias rm="rm -i"  # show confirm prompt
 
 # start tmux
 if [[ "$TMUX" = "" ]];
@@ -23,7 +22,7 @@ export PATH=$HOME/.local/bin:$PATH
 # User configuration
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-
+function random_password() { tr -dc "[:graph:]" < /dev/urandom | head -c${1:-31} && echo }
 function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; tmux set-window-option automatic-rename on }
 function source_if_exists () {
     if test -r "$1"; then

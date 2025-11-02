@@ -1,1 +1,3 @@
 $DOTFILES/alacritty/alacritty.toml=$HOME/.config/alacritty/alacritty.toml
+$DOTFILES/alacritty/key_bindings.toml=$HOME/.config/alacritty/key_bindings.toml
+$DOTFILES/alacritty/themes=$HOME/.config/alacritty/themes
