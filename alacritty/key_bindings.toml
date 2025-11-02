@@ -15,11 +15,6 @@ key = "H"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u0018-"
-key = "V"
-mods = "Control"
-
-[[keyboard.bindings]]
 action = "Quit"
 key = "Q"
 mods = "Control"
