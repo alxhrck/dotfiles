@@ -20,9 +20,6 @@ export HISTFILE="$HOME/.zsh_history"
 export LSCOLORS=Exgxcxdxbxegedabagacad
 export PATH=$HOME/.local/bin:$PATH
 
-# User configuration
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
 function random_password() { tr -dc "[:graph:]" < /dev/urandom | head -c${1:-31} && echo }
 function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; tmux set-window-option automatic-rename on }
 function source_if_exists () {
@@ -32,5 +29,6 @@ function source_if_exists () {
 }
 
 source_if_exists ~/.config/history.zsh
+source_if_exists ~/.zshrc.local # User configuration
 
 eval "$(starship init zsh)"
