@@ -14,4 +14,4 @@ cd <repo>
 ```
 ### Local ZSH Config 
 
-Configurations needed to be kept separate from this repo can be included in .zsh.local which will be sourced from rc.zsh
+Configurations needed to be kept separate from this repo can be included in `.zsh.local` which will be sourced from `rc.zsh`
