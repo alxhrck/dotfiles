@@ -17,6 +17,7 @@ then
 fi
 
 export HISTFILE="$HOME/.zsh_history"
+export HIST_STAMPS="yyyy-mm-dd"
 export LSCOLORS=Exgxcxdxbxegedabagacad
 export PATH=$HOME/.local/bin:$PATH
 
