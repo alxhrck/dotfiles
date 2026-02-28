@@ -6,14 +6,14 @@ setopt INTERACTIVE_COMMENTS
 
 
 alias ll="ls --color=auto -larht"  # list files with details
-alias code="flatpak run com.visualstudio.code"
 alias rm="rm -i"  # show confirm prompt
 alias ls="ls --color=auto"
+alias ope="sudo !!"
 
 # start tmux
 if [[ "$TMUX" = "" ]];
 then
-  tmux attach -t MY_TMUX || tmux new -s MY_TMUX;
+  tmux attach -t $(echo $'\uebc8') || tmux new -s $(echo $'\uebc8');
 fi
 
 export HISTFILE="$HOME/.zsh_history"

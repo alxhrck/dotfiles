@@ -23,3 +23,26 @@ mods = "Control"
 action = "Quit"
 key = "W"
 mods = "Control"
+
+[[keyboard.bindings]]
+action = "ClearHistory"
+key = "C"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key = "B"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key = "F"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"

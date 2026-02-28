@@ -55,7 +55,7 @@
 # tmux_session_info.sh {
 	# Session info format to feed into the command: tmux display-message -p
 	# For example, if FORMAT is '[ #S ]', the command is: tmux display-message -p '[ #S ]'
-	export TMUX_POWERLINE_SEG_TMUX_SESSION_INFO_FORMAT="#S:#I.#P"
+	export TMUX_POWERLINE_SEG_TMUX_SESSION_INFO_FORMAT="#S #I.#P"
 # }
 
 # utc_time.sh {

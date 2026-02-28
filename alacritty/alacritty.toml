@@ -1,6 +1,13 @@
 import = ["/home/alex/.config/alacritty/key_bindings.toml", "/home/alex/.config/alacritty/themes/theme.toml"]
 live_config_reload = true
 
+[bell]
+animation = "Ease"
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
 [env]
 TERM = "xterm-256color"
 
@@ -8,14 +15,20 @@ TERM = "xterm-256color"
 size = 11.0
 
 [font.bold]
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.italic]
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
 [font.normal]
-family = "JetBrains Mono"
-style = "Medium"
+family = "JetBrainsMono Nerd Font"
+style = "Light"
 
 [scrolling]
 history = 50000
@@ -32,7 +45,7 @@ program = "/usr/bin/zsh"
 [window]
 dynamic_title = false
 opacity = 0.9
-#decorations = "none"
+decorations = "none"
 
 [window.dimensions]
 columns = 160
