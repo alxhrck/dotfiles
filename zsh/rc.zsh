@@ -25,6 +25,7 @@ export HISTFILE="$HOME/.zsh_history"
 export HIST_STAMPS="yyyy-mm-dd"
 export LSCOLORS=Exgxcxdxbxegedabagacad
 export PATH=$HOME/.local/bin:$PATH
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion) 
 
 function help() { "$@" --help 2>&1 | bathelp }
 function random_password() { tr -dc "[:graph:]" < /dev/urandom | head -c${1:-31} && echo }
@@ -36,6 +37,7 @@ function source_if_exists () {
 }
 
 source_if_exists ~/.config/history.zsh
+source_if_exists ~/.config/zsh-autosuggestions.zsh
 source_if_exists ~/.zshrc.local # User configuration
 
 eval "$(starship init zsh)"

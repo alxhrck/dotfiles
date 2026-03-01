@@ -1,2 +1,3 @@
 $DOTFILES/zsh/rc.zsh=$HOME/.zshrc
 $DOTFILES/zsh/history.zsh=$HOME/.config/history.zsh
+$DOTFILES/zsh/zsh-autosuggestions.zsh=$HOME/.config/zsh-autosuggestions.zsh
