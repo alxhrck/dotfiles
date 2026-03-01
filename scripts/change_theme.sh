@@ -7,7 +7,7 @@ get_theme_names (){
 	cd $THEME_DIR
 	shopt -s nullglob	
 	for f in *; do
-		echo $f |grep -v theme.yaml | cut -d"." -f 1
+		echo $f |grep -v theme.toml | cut -d"." -f 1
 	done
 	shopt -u nullglob
 }
@@ -38,9 +38,9 @@ fi
 
 
 
-if [ -n THEME_NAME ] && [ -f $THEME_DIR/$THEME_NAME.yaml ]; then
-	ln -sf $THEME_DIR/$THEME_NAME.yaml $THEME_DIR/theme.yaml
+if [ -n THEME_NAME ] && [ -f $THEME_DIR/$THEME_NAME.toml ]; then
+	ln -sf $THEME_DIR/$THEME_NAME.toml $THEME_DIR/theme.toml
 	touch $CONFIG
 else
-	echo "Theme file, '$THEME_NAME.yaml' does not exist in $THEME_DIR."
+	echo "Theme file, '$THEME_NAME.toml' does not exist in $THEME_DIR"
 fi

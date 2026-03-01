@@ -6,10 +6,11 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+$cmd_duration\
 $fill\
 $terraform\
 $python\
-$cmd_duration\
+$time\
 $line_break\
 $character"""
 
@@ -18,18 +19,17 @@ style = 'bold green'
 symbol = '👩‍💻 '
 disabled = true
 
-
 [localip]
 ssh_only = false
-format = '[$localipv4](bold red) '
-disabled = true
+format = '[$localipv4](bold purple)'
+disabled = false
 
 [fill]
 symbol = " "
 
 [character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[➜](bold red) '
+success_symbol = '[](bold green) ' # 󰣧  
+error_symbol = '[](bold red) ' # 
 
 [username]
 style_user = 'white bold'
@@ -47,14 +47,14 @@ symbol = '🅰 '
 symbol = "\U0001f40d "
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
-
 [time]
 disabled = false
-style = "bold white"
+use_12hr = true
+style = "white"
 format = "[$time]($style)"
 
 [cmd_duration]
-format = "[$duration]($style)"
+format = " [$duration]($style)"
 style = "yellow"
 
 [git_status]
