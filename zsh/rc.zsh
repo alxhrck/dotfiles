@@ -28,7 +28,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 function help() { "$@" --help 2>&1 | bathelp }
 function random_password() { tr -dc "[:graph:]" < /dev/urandom | head -c${1:-31} && echo }
-function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; }
+function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; tmux set-window-option automatic-rename on }
 function source_if_exists () {
     if test -r "$1"; then
         source "$1"
