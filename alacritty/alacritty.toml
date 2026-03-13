@@ -45,7 +45,7 @@ program = "/usr/bin/zsh"
 [window]
 dynamic_title = false
 opacity = 0.9
-decorations = "none"
+decorations = "full"
 
 [window.dimensions]
 columns = 160
