@@ -8,16 +8,28 @@ action = "Paste"
 key = "V"
 mods = "Control"
 
-# Send Ctrl + x + | to tmux (xxd -ps)
+# Send Ctrl + x + | to tmux (use xxd -ps and ctrl+{letter})
 [[keyboard.bindings]]
 chars = "\u0018|"
-key = "H"
-mods = "Control"
+key = "|"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
-action = "Quit"
-key = "Q"
+chars = "\u0018-"
+key = "_"
+mods = "Control|Shift"
+
+# Create new tmux pane (new tab)
+[[keyboard.bindings]]
+chars = "\u0018t"
+key = "T"
 mods = "Control"
+
+# Switch to next pane
+[[keyboard.bindings]]
+chars = "\u0018n"
+key = "N"
+mods = "Alt"
 
 [[keyboard.bindings]]
 action = "Quit"
@@ -25,24 +37,21 @@ key = "W"
 mods = "Control"
 
 [[keyboard.bindings]]
-action = "ClearHistory"
-key = "C"
-mods = "Alt"
-
-[[keyboard.bindings]]
 action = "SearchForward"
-key = "B"
-mods = "Alt"
-
-[[keyboard.bindings]]
-action = "SearchBackward"
 key = "F"
-mods = "Alt"
+mods = "Control"
+
+#[[keyboard.bindings]]
+#action = "SearchBackward"
+#key = "F"
+#mods = "Alt"
 
 [[keyboard.bindings]]
 action = "ScrollPageUp"
 key = "PageUp"
+mods = "Alt"
 
 [[keyboard.bindings]]
 action = "ScrollPageDown"
 key = "PageDown"
+mods = "Alt"
