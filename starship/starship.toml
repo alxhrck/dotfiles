@@ -14,6 +14,8 @@ $time\
 $line_break\
 $character"""
 
+add_newline = true
+
 [sudo]
 style = 'bold green'
 symbol = '👩‍💻 '
@@ -74,3 +76,9 @@ disabled = false
 [directory]
 truncation_length = 4
 truncate_to_repo = false
+
+[directory.substitutions]
+'Documents' = '󰈙'
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
