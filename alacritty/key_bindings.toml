@@ -46,3 +46,4 @@ key = "PageUp"
 [[keyboard.bindings]]
 action = "ScrollPageDown"
 key = "PageDown"
+

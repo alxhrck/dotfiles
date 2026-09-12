@@ -1,6 +1,10 @@
 # Disable CTRL + S and CTRL + Q
 stty -ixon
 
+# Use Home and End key
+#bindkey  "^[[1~"   beginning-of-line
+#bindkey  "^[[4~"   end-of-line
+
 # Setopts
 setopt interactivecomments # enable comments "#" expressions in the prompt shell
 setopt extended_glob
@@ -46,7 +50,7 @@ fi
 # Slammin Functions
 function help() { "$@" --help 2>&1 | bathelp }
 function random_password() { tr -dc "[:graph:]" < /dev/urandom | head -c${1:-31} && echo }
-function ssh() { tmux rename-window "$@"; /usr/bin/ssh $@; tmux set-window-option automatic-rename on }
+function ssh() { tmux rename-window "$@"; /usr/bin/ssh -o ConnectTimeout=2  $@; tmux set-window-option automatic-rename on }
 function source_if_exists () {
     if test -r "$1"; then
         source "$1"
