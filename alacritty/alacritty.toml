@@ -1,5 +1,5 @@
-import = ["/home/alex/.config/alacritty/key_bindings.toml", "/home/alex/.config/alacritty/themes/theme.toml"]
-live_config_reload = true
+general.import = ["/home/alex/.config/alacritty/key_bindings.toml", "/home/alex/.config/alacritty/themes/theme.toml"]
+general.live_config_reload = true
 
 [bell]
 animation = "Ease"
@@ -38,7 +38,7 @@ multiplier = 10
 save_to_clipboard = true
 semantic_escape_chars = "|:\"' {}()[]<>"
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/usr/bin/zsh"
 
@@ -54,3 +54,5 @@ lines = 40
 [window.padding]
 x = 8
 y = 8
+
+[terminal]
